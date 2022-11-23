@@ -1,0 +1,444 @@
+@media screen and (max-height: 750px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .card {
+    max-width: 200px !important;
+  }
+  .card-image img {
+    width: 200px !important;
+  }
+}
+body {
+  height: 100%;
+  width: 100vw;
+  background-color: #d3d3d3;
+  font-family: sans-serif;
+}
+
+main {
+  margin-left: 200px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #c3c1c1;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.sidenav a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+}
+.sidenav a:visited {
+  color: black;
+}
+.sidenav a:hover {
+  color: rgb(20, 115, 198);
+}
+
+.title {
+  text-align: center;
+}
+
+.jumbotron {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex-direction: row;
+}
+
+.ceo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex-direction: row;
+}
+
+.team {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex-direction: column;
+  overflow: hidden;
+  height: 200px;
+}
+.team-picture {
+  width: 98%;
+  height: 400px;
+}
+
+.form {
+  margin: 2rem;
+  width: fit-content;
+  padding: 24px;
+  height: auto;
+  margin-top: 20px;
+  height: auto;
+  width: 100%;
+}
+.form-input {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.form label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+.form input[type=text], .form input[type=email], .form textarea {
+  width: 90%;
+  color: purple;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+.form-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.form-labels {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+.form-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+.form-name {
+  color: white;
+  margin-top: 10px;
+  font-family: bold;
+}
+.form-btn {
+  background-color: black;
+  float: right;
+  height: 40px;
+  width: 75%;
+  border-radius: 8px;
+  color: white;
+  margin-top: 40px;
+  cursor: pointer;
+}
+.form-alert {
+  background-color: purple;
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.hid {
+  color: orange;
+  font-weight: bold;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex-direction: none;
+  margin-left: 10px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex-direction: row;
+  margin-left: 10px;
+}
+
+.admin {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 70%;
+}
+.admin-submitted {
+  color: white;
+  background-color: #28a745;
+}
+.admin input[type=text], .admin select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.admin input[type=file], .admin select {
+  width: 200px;
+  padding: 12px 20px;
+  margin: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: inline-block;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.admin input[type=submit] {
+  width: 100%;
+  background-color: rgb(20, 115, 198);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.admin textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+}
+.admin input[type=submit]:hover {
+  background-color: rgb(2, 79, 147);
+}
+
+.card {
+  border: 1px solid rgba(0, 0, 0, 0);
+  display: flex;
+  margin: 1rem;
+  flex-direction: column;
+  width: fit-content;
+  width: fit-content;
+  max-width: 310px;
+  border-radius: 6px;
+}
+.card:hover {
+  background-color: #c8cfd5;
+  border: 2px solid black;
+  transition: 600ms;
+}
+.card:hover .card-title {
+  color: rgb(2, 79, 147);
+  transition: 800ms;
+  border-color: rgb(2, 79, 147);
+  display: inline-block;
+  text-transform: uppercase;
+}
+.card:hover .card-model {
+  color: rgb(2, 79, 147);
+  transition: 800ms;
+  border-color: rgb(2, 79, 147);
+  display: inline-block;
+}
+.card:hover img {
+  opacity: 1;
+}
+.card-title {
+  font-size: 1.2rem;
+  margin-left: 4px;
+  text-align: center;
+  color: rgb(20, 115, 198);
+  font-weight: bold;
+}
+.card-model {
+  font-size: 1.2rem;
+  text-align: center;
+  color: rgb(20, 115, 198);
+}
+.card-image {
+  max-height: 300px;
+  height: 300px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+.card-image img {
+  width: 300px;
+  opacity: 0.6;
+}
+.card-text {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.card-button {
+  background-color: #d9534f;
+  color: white;
+  margin-bottom: 20px;
+  margin-left: 4px;
+  width: 40%;
+  border-radius: 6px;
+  padding: 4px;
+}
+.card-tag {
+  width: auto;
+  transform: translate(0, -6px);
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+.card-tag .bg-primary {
+  background-color: rgb(20, 115, 198);
+}
+.card-tag .bg-danger {
+  background-color: #d9534f;
+}
+.card-tag .bg-success {
+  background-color: #28a745;
+}
+.card-tag .bg-default {
+  background-color: #6c757d;
+}
+.card-tag-text {
+  border-radius: 5px;
+  padding: 4px;
+  color: white;
+  text-align: center;
+  margin-left: 1.2rem;
+}
+.card-bg-danger {
+  background-color: rgb(20, 115, 198);
+}
+.card-featured {
+  max-width: 1200px;
+}
+.card-featured .card-title {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.panel {
+  display: flex;
+  margin: 2rem;
+  flex-direction: column;
+  width: fit-content;
+  padding: 24px;
+  width: fit-content;
+  background-color: rgb(20, 115, 198);
+  border-radius: 6px;
+}
+.panel:hover {
+  background-color: rgb(9, 9, 10);
+  color: white;
+}
+.panel-title {
+  font-size: 1.2rem;
+}
+.panel-featured {
+  max-width: 1200px;
+}
+.panel-featured .panel-title {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.profile {
+  border: 1px solid rgb(20, 115, 198);
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  width: fit-content;
+  width: fit-content;
+  background-color: #d9534f;
+  border-radius: 6px;
+  width: 400px;
+  height: 200px;
+}
+.profile-text {
+  flex-direction: column;
+  text-align: right;
+  color: white;
+  text-align: left;
+}
+.profile-text a {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.profile-text a::after {
+  content: "\a";
+  white-space: pre;
+}
+.profile-text a:visited {
+  color: white;
+}
+
+.social {
+  width: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  flex-direction: row;
+}
+
+.credit-title {
+  color: rgb(20, 115, 198);
+  border-top: 1px dashed rgb(49, 50, 52);
+  width: 100%;
+  gap: 1.2em;
+  text-align: center;
+}
+
+.credit-card {
+  border: 1px solid rgba(0, 0, 0, 0);
+  display: flex;
+  margin: 1rem;
+  flex-direction: column;
+  width: fit-content;
+  transition: all 0.2s;
+  border-radius: 4px;
+  width: 210px;
+  background-image: url("https://ll-wd.com/images/logo.png");
+  background-size: cover;
+  color: white;
+}
+.credit-card:hover {
+  background-color: #c8cfd5;
+  border: 2px solid black;
+  transition: 600ms;
+}
+.credit-card:hover .card-title {
+  color: rgb(2, 79, 147);
+  transition: 800ms;
+  border-color: rgb(2, 79, 147);
+  display: inline-block;
+  text-transform: uppercase;
+}
+.credit-card:hover .card-model {
+  color: rgb(2, 79, 147);
+  transition: 800ms;
+  border-color: rgb(2, 79, 147);
+  display: inline-block;
+}
+.credit-card:hover img {
+  opacity: 1;
+}
+.credit-card:hover {
+  transform: translateY(5px);
+  background-color: randomColor();
+}
+.credit-card:active {
+  transform: translateY(-2px);
+}
+.credit-card p {
+  margin-bottom: 4px;
+  margin-top: 0px;
+  filter: brightness(95%);
+}
+
+/*# sourceMappingURL=styles.css.map */

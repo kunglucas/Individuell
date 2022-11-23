@@ -1,0 +1,508 @@
+$body-background: #d3d3d3;
+$nav-background: #c3c1c1;
+$primary-color: rgb(20, 115, 198);
+$primary-color-hover: rgb(2, 79, 147);
+$success-color:#28a745;
+$hover-text-color:rgb(255, 136, 0);
+$danger-color: #d9534f;
+$default-color: #6c757d;
+$card-bg-color: #c8cfd5;
+  
+@media screen and (max-height: 750px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+@media screen and (max-width: 600px) {
+    .card {
+        max-width:200px !important;
+    }
+    .card-image img {
+        width:200px !important;
+    }
+  }
+
+@mixin card {
+    border:1px solid rgba(0,0,0,0);
+    display:flex;
+    margin:1rem;
+    flex-direction: column;
+    width:fit-content;
+
+   &:hover {
+    background-color:$card-bg-color;
+    border:2px solid black;
+    transition: 600ms;
+    
+    & .card-title {
+        color:$primary-color-hover;
+        transition: 800ms;
+        border-color: $primary-color-hover;
+        display: inline-block;
+        text-transform: uppercase;
+    }
+
+    & .card-model {
+        color:$primary-color-hover;
+        transition: 800ms;
+        border-color: $primary-color-hover;
+        display: inline-block;
+    }
+
+    & img {
+        opacity: 1;
+    }
+
+}
+}
+//Element for the CEO section.
+@mixin profile {
+    border:1px solid $primary-color;
+    display:flex;
+    flex-direction: row;
+    gap:2rem;
+    width:fit-content;
+}
+
+@mixin panel {
+    display:flex;
+    margin:2rem;
+    flex-direction: column;
+    width:fit-content;
+    padding:24px;
+
+   &:hover {
+    background-color:rgb(9, 9, 10);
+    color:white;
+}
+}
+
+@mixin form {
+    margin:2rem;
+    width:fit-content;
+    padding:24px;
+    height:auto;
+}
+
+@mixin hovereffect {
+    transition:all 0.2s;
+    &:hover {
+        transform:translateY(5px);
+        background-color:randomColor();
+    }
+    &:active {
+        transform:translateY(-2px);
+    }
+}
+
+body {
+    height:100%;
+    width:100vw;
+    background-color:$body-background;
+    font-family:sans-serif;
+}
+
+main {
+    margin-left: 200px;
+}
+
+// Navigation menu (sidebar).
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: $nav-background;
+    overflow-x: hidden;
+    padding-top: 20px;
+
+    & a {
+        padding: 6px 6px 6px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        display: block;
+    }
+
+    & a:visited {
+        color:black;
+    }
+
+    & a:hover {
+        color:$primary-color;
+    }
+
+  }
+  
+
+.title {
+    text-align:center;
+}
+
+
+.jumbotron {
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+    flex-direction:row;
+}
+
+.ceo {
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+    flex-direction:row;
+}
+//Team image.
+.team {
+    margin-top:20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+    flex-direction:column;
+    overflow:hidden;
+    height:200px;
+
+
+    &-picture {
+        width:98%;
+        height:400px;
+    }
+}
+
+.form {
+    @include form();
+    margin-top:20px;
+    height:auto;
+    width:100%;
+    
+    
+    &-input {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+    }
+
+    label {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+    }
+    
+    input[type=text], input[type=email], textarea {
+        width: 90%;
+        color:purple;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+      }
+
+    &-row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+
+    &-labels {
+        float:left;
+        width: 25%;
+        margin-top: 6px;
+    }
+
+    &-75 {
+        float: left;
+        width: 75%;
+        margin-top: 6px;
+    }
+
+      &-name {
+        color:white;
+        margin-top:10px;
+        font-family: bold;
+      }
+
+    &-btn {
+        background-color:black;
+        float: right;
+        height:40px;
+        width: 75%;
+        border-radius: 8px;
+        color:white;
+        margin-top:40px;
+        cursor: pointer;
+    }
+
+    &-alert {
+        background-color:purple;
+        width:100%;
+        color:white;
+        font-weight: bold;
+        height:50px;
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+    // Jquery "Just buy it" slogan. 
+    .hid {
+        color:orange;
+        font-weight: bold;
+    }
+
+.contact {
+    display:flex;
+    flex-wrap: wrap;
+    gap:10px;
+    flex-direction: none;
+    margin-left:10px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+    flex-direction:row;
+    margin-left:10px;
+}
+// Add product.
+.admin {
+border-radius: 5px;
+background-color: #f2f2f2;
+padding: 20px;
+width:70%;
+
+&-submitted {
+    color:white;
+    background-color:$success-color;
+}
+
+& input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  & input[type=file], select {
+    width: 200px;
+    padding: 12px 20px;
+    margin: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: inline-block;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+  
+  & input[type=submit] {
+    width: 100%;
+    background-color: $primary-color;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  & textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+  }
+  
+  & input[type=submit]:hover {
+    background-color: $primary-color-hover;
+  }
+
+}
+// Card elements.
+.card {
+    @include card();
+    width: fit-content;
+    max-width:310px;
+    border-radius:6px;
+
+&-title {
+    font-size:1.2rem;
+    margin-left:4px;
+    text-align:center;
+    color:$primary-color;
+    font-weight:bold;
+}
+
+&-model {
+    font-size:1.2rem;
+    text-align:center;
+    color:$primary-color;
+}
+
+&-image {
+    max-height:300px;
+    height:300px;
+    background-color:white;
+    display: flex;
+    align-items: center;
+
+    & img {
+        width:300px;
+        opacity: 0.6;
+    }
+}
+
+&-text {
+    margin-left:4px;
+    margin-right:4px;
+}
+
+&-button {
+    background-color:$danger-color;
+    color:white;
+    margin-bottom:20px;
+    margin-left:4px;
+    width:40%;
+    border-radius:6px;
+    padding:4px;
+}
+
+&-tag {
+    width:auto;
+    transform:translate(0,-6px);
+    height:20px;
+    display: flex;
+    align-items: center;
+
+    & .bg-primary {
+        background-color:$primary-color;
+    }
+
+    & .bg-danger {
+        background-color:$danger-color;
+    }
+
+    & .bg-success {
+        background-color:$success-color;
+    }
+
+    & .bg-default {
+        background-color:$default-color;
+    }
+}
+
+&-tag-text {
+    border-radius:5px;
+    padding:4px;
+    color:white;
+    text-align:center;
+    margin-left:1.2rem;
+
+}
+
+&-bg-danger
+{
+    background-color:$primary-color;
+}
+
+&-featured {
+    max-width:1200px;
+    
+    
+    & .card-title {
+        font-size:1.5rem;
+        color:white;
+    }
+}
+
+}
+
+// Panel elements.
+.panel {
+    @include panel();
+    width: fit-content;
+    background-color:$primary-color;
+    border-radius:6px;
+
+&-title {
+    font-size:1.2rem;
+}
+
+&-featured {
+    max-width:1200px;
+    
+    & .panel-title {
+        font-size:1.5rem;
+        color:white;
+    }
+}
+
+}
+
+// Panel elements.
+.profile {
+    @include profile();
+    width: fit-content;
+    background-color:$danger-color;
+    border-radius:6px;
+    width:400px;
+    height:200px;
+
+&-text {
+    flex-direction: column;
+    text-align:right;
+    color:white;
+    text-align:left;
+
+    a {
+        color:white;
+        text-transform:uppercase;
+        text-decoration: none;
+    }
+
+    a::after {
+        content: "\a";
+        white-space: pre;
+    }
+
+    a:visited {
+        color:white;
+    }
+}
+
+}
+
+.social {
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    gap:16px;
+    flex-direction:row;
+}
+
+.credit-title {
+    color:$primary-color; 
+    border-top:1px dashed rgb(49, 50, 52);
+    width:100%;
+    gap:1.2em;
+    text-align:center;
+}
+
+.credit-card {
+    @include card();
+    @include hovereffect();
+    border-radius:4px;
+    width:210px;
+    background-image: url("https://ll-wd.com/images/logo.png");
+    background-size: cover;
+    color:white;
+    & p {
+        margin-bottom:4px;
+        margin-top:0px;
+        filter:brightness(95%);
+    }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>SkoPunktSe</title>
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"
+  ></script>
+</head>
+<body>
+    <header>
+        <div class="sidenav">
+            <a href="index.html">Hem</a>
+            <a href="viewproduct.html">Alla produkter</a>
+            <a href="addproduct.html">Lägg till produkt</a>
+            <a href="contact.html">Om oss</a>
+          </div>
+    </header>
+    <main>
+        <h1 class="title">SkoPunktSe</h1>
+        <section class="products">
+            <div class="card card">
+                <div class="card-image" id="product-image">
+                    
+                </div>
+                <h2 class="card-title" id="product-name"></h2>
+                <p class="card-text" id="product-text"></p>
+                <small style="margin-bottom:20px; margin-left:4px;" class="card-price" id="product-price"></small>
+                <span class="card-tag">
+                    <p class="card-tag-text bg-default">Outdoors</p>
+                </span>
+            </div>
+            </section>
+            <p id="demo"></p>   
+            <script>
+                // Get product name.
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                const product = urlParams.get("product");
+                const product1 = ["Toffla", "Black & White", "350kr", "toffla.png"];
+                const product2 = ["Adidas", "Black & White", "508kr", "adidas.png"];
+                const product3 = ["Vans", "Black & White", "510kr", "vans.png"];
+                const product4 = ["Adidas", "Brown", "520kr", "adidas.png"];
+                const product5 = ["Timberland", "Blue", "550kr", "snow.png"];
+                const product6 = ["Nike", "White", "100kr", "nike.png"];
+                const noItem = "Product not found..";
+        
+                switch (product) {
+                case "sko1":
+               let productName = product1.slice(0, -3);
+               let productColor = product1.slice(1, -2);
+               let productPrice = product1.slice(2, -1);
+               let productPath = product1.slice(3);
+               var img = document.createElement("img");
+               img.src = "./images/" + productPath;
+               var src = document.getElementById("product-image");
+               src.appendChild(img);
+               document.getElementById("product-name").innerHTML = productName;
+               document.getElementById("product-text").innerHTML = "Färg: " + productColor;
+               document.getElementById("product-price").innerHTML = "Pris: " + productPrice;
+                    break;
+                case "sko2":
+                    break;
+                case "sko3":
+                document.getElementById("demo").innerHTML = product3;
+                    break;
+                case "sko4":
+                document.getElementById("demo").innerHTML = product4;
+                    break;
+                case "sko5":
+                document.getElementById("demo").innerHTML = product5;
+                    break;
+                case "sko6":
+                document.getElementById("demo").innerHTML = product6;
+                    break;
+                default:
+                document.getElementById("demo").innerHTML = noItem;
+                    break;
+                }
+            </script>
+        </main>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>SkoPunktSe</title>
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"
+  ></script>
+</head>
+<body>
+    <header>
+        <div class="sidenav">
+            <a href="index.html">Hem</a>
+            <a href="viewproduct.html">Alla produkter</a>
+            <a href="addproduct.html">Lägg till produkt</a>
+            <a href="contact.html">Om oss</a>
+          </div>
+    </header>
+<main>
+  <h1 class="heading-title">SkoPunktSe</h1>
+    <section class="admin">
+      <p class="admin admin-submitted" id="p1">Produkten är tillagd!</p>
+      <form id="form1">
+            <label for="pname">Namn</label>
+            <input type="text" id="fname" name="firstname" placeholder="Produktens namn..">
+        
+            <label for="price">Pris</label>
+            <input type="text" id="lname" name="lastname" placeholder="Sätt ett pris i siffror..">
+            
+            <label for="lname">Kort beskrivning</label>
+            <textarea placeholder="Beskriv produkten.."></textarea>
+            <label for="media">Bilder</label>
+            <div class="media">
+              <input type="file" id="myfile" name="myfile" multiple>
+              <input type="file" id="myfile" name="myfile" multiple>
+              <input type="file" id="myfile" name="myfile" multiple>
+            </div>
+            <label for="category">Kategori</label>
+            <select id="category" name="category">
+              <option value="sport">Sport</option>
+              <option value="outdoors">Outdoors</option>
+              <option value="running">Running</option>
+              <option value="skav">Skavsår</option>
+            </select>
+          </form>
+          <input type="submit" id="show-text-btn" value="Skapa produkt">
+        </section>
+        <section class="footer">
+            <p class="footer-content">&copy; SkoPunktSe - 2022</p>
+        </section>
+</main>
+<script>
+    // Show when button is clicked by user.
+    $(document).ready(function () {
+
+$("#p1").hide();
+
+$("#show-text-btn").click(function(){
+     $("#p1").toggle();
+     $("#form1").toggle();
+});
+});
+</script>
+</body>
+</html>

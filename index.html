@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>SkoPunktSe</title>
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"
+  ></script>
+</head>
+<body>
+    <header>
+        <div class="sidenav">
+            <a href="index.html">Hem</a>
+            <a href="viewproduct.html">Alla produkter</a>
+            <a href="addproduct.html">Lägg till produkt</a>
+            <a href="contact.html">Om oss</a>
+          </div>
+    </header>
+<main>
+    <h1 class="title">SkoPunktSe</h1>
+    <section class="jumbotron">
+        <article class="panel panel-featured">
+            <h2 class="panel-title">Skynda Fynda!</h2>
+            <p class="panel-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur dicta rerum excepturi officia obcaecati nesciunt nostrum voluptatem, eligendi, eveniet expedita ullam eius fugiat vel, maxime error unde quibusdam quae aspernatur!</p>
+        </article>
+    </section>
+    <section class="products">
+        <div class="card card">
+            <div class="card-image">
+                <a href="viewproduct.html?product=sko1"><img src="images/toffla.png" alt="Toffla för stranden"></a>
+            </div>
+            <h2 class="card-title">Tofflan</h2>
+            <small class="card-model">Årsmodell 2000</small>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam magni deleniti rerum libero dolores obcaecati quaerat fugit delectus quae, velit accusantium, sit labore exercitationem odio sint odit dolorum a eaque?</p>
+            <button class="card-button" id="showNumbOne">Visa mer</button>
+            <p id="p1">
+                Show this text when button is clicked.
+            </p>
+            <span class="card-tag">
+                <p class="card-tag-text bg-default">Outdoors</p>
+            </span>
+        </div>
+        <div class="card card">
+            <div class="card-image">
+                <a href="viewproduct.html?product=sko2"><img src="images/adidas.png" alt="Adidas sko svart"></a>
+            </div>
+            <h2 class="card-title">Adidas</h2>
+            <small class="card-model">Årsmodell 2020</small>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur reprehenderit alias suscipit amet quod iure odit quidem, ut ducimus. Enim ipsam assumenda vel ut repellendus nostrum nam veritatis, accusantium itaque.</p>
+            <button class="card-button" id="showNumbTwo">Visa mer</button>
+            <p id="p2">
+                Show this text when button is clicked.
+            </p>
+            <span class="card-tag">
+                <p class="card-tag-text bg-default">Outdoors</p>
+                <p class="card-tag-text bg-success">Running</p>
+            </span>
+        </div>
+        <div class="card card" href="#">
+            <div class="card-image">
+                <a href="viewproduct.html?product=sko3"><img src="images/vans.png" alt="Converse låga skor"></a>
+            </div>
+           <h2 class="card-title">Vans</h2>
+           <small class="card-model">Årsmodell 2022</small> 
+           <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia sit non molestiae praesentium, perspiciatis natus corrupti minima. Id, beatae deleniti dicta modi dolor, temporibus quidem autem alias nulla praesentium recusandae?</p>
+            <button class="card-button" id="showNumbThree">Visa mer</button>
+            <p id="p3">
+                Show this text when button is clicked.
+            </p>
+            <span class="card-tag">
+                <p class="card-tag-text bg-primary">Sport</p>
+                <p class="card-tag-text bg-danger">Skavsår</p>
+            </span>
+        </div>
+        <div class="card card" href="#">
+            <div class="card-image">
+                <a href="viewproduct.html?product=sko4"><img src="images/nike.png" alt="nike sneakers sko"></a>
+            </div>
+            <h2 class="card-title">Nike</h2>
+            <small class="card-model">Årsmodell 2019</small>
+            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum laboriosam, atque exercitationem ut harum excepturi sint. Quidem ducimus eaque error ratione odit ipsam, nobis modi expedita! Fugiat veniam minima officia?</p>
+            <button class="card-button" id="showNumbFour">Visa mer</button>
+            <p id="p4">
+                Show this text when button is clicked.
+            </p>
+            <span class="card-tag">
+                <p class="card-tag-text bg-primary">Sport</p>
+            </span>
+        </div>
+        <div class="card card" href="#">
+            <div class="card-image">
+                <a href="viewproduct.html?product=sko5"><img src="images/snow.png" alt="Bruna vinterkängor"></a>
+            </div>
+            <h2 class="card-title">Kängan</h2>
+            <small class="card-model">Årsmodell 2023</small>
+            <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda autem ut libero dignissimos fugit facere ducimus ab itaque veritatis sunt, omnis odio sint? Repellat dolores doloremque laborum ad molestiae ut!</p>
+            <button class="card-button" id="showNumbFive">Visa mer</button>
+            <p id="p5">
+                Show this text when button is clicked.
+            </p>
+            <span class="card-tag">
+                <p class="card-tag-text bg-default">Outdoors</p>
+            </span>
+        </div>
+    </section>
+    <section class="footer">
+        <p class="footer-content">&copy; SkoPunktSe - 2022</p>
+    </section>
+</main>
+<script>
+    // Jquery to hover the jumbotron and display Motod.
+$(".panel").hover(function () {
+    $(this).append($("<span class='hid'> Just Buy It! </span>"));
+},function () {
+    $(this).find('span').slideUp('fast');
+});
+
+// Show when button is clicked by user.
+$(document).ready(function () {
+
+$("#p5").hide();
+$("#p4").hide();
+$("#p3").hide();
+$("#p2").hide();
+$("#p1").hide();
+$("#showNumbFive").show();
+$("#showNumbFour").show();
+$("showNumbThree").show();
+$("showNumbTwo").show();
+$("showNumbOne").show();
+
+$("#showNumbFive").click(function(){
+     $("#p5").toggle();
+     $("#showNumbFive").html() === 'Visa mer' ? $("#showNumbFive").html('Visa mindre') : $("#showNumbFive").html('Visa mer');
+});
+
+$("#showNumbFour").click(function(){
+     $("#p4").toggle();
+     $("#showNumbFour").html() === 'Visa mer' ? $("#showNumbFour").html('Visa mindre') : $("#showNumbFour").html('Visa mer');
+});
+
+$("#showNumbThree").click(function(){
+     $("#p3").toggle();
+    //  $("#showNumbFive").html("Visa mindre").toggle();
+     $("#showNumbThree").html() === 'Visa mer' ? $("#showNumbThree").html('Visa mindre') : $("#showNumbThree").html('Visa mer');
+});
+
+$("#showNumbTwo").click(function(){
+     $("#p2").toggle();
+    //  $("#showNumbFive").html("Visa mindre").toggle();
+     $("#showNumbTwo").html() === 'Visa mer' ? $("#showNumbTwo").html('Visa mindre') : $("#showNumbTwo").html('Visa mer');
+});
+
+$("#showNumbOne").click(function(){
+     $("#p1").toggle();
+    //  $("#showNumbFive").html("Visa mindre").toggle();
+     $("#showNumbOne").html() === 'Visa mer' ? $("#showNumbOne").html('Visa mindre') : $("#showNumbOne").html('Visa mer');
+});
+});
+</script>
+</body>
+</html>

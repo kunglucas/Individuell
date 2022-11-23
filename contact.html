@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>SkoPunktSe</title>
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"
+  ></script>
+</head>
+<body>
+    <header>
+        <div class="sidenav">
+            <a href="index.html">Hem</a>
+            <a href="viewproduct.html">Alla produkter</a>
+            <a href="addproduct.html">Lägg till produkt</a>
+            <a href="contact.html">Om oss</a>
+          </div>
+    </header>
+<main>
+    <h1 class="title">SkoPunktSe</h1>
+    <section class="about">
+    <!-- 
+    Company information.
+    -->
+        <h1>Om SkoPunktSe</h1>
+        <p>Vi säljer fina skor!</p>
+        <h3>Vilka är vi?</h3>
+        <p>Quinyx & Lucas</p>
+        <h3>Verkställande direktör</h3>
+        <p>Lucas Larsson</p>
+    </section>
+    <!-- 
+    CEO information.
+    -->
+    <section class="ceo">
+        <div class="profile profile">
+                <img src="images/profilePicture.png" alt="Bild på företagets VD." style="width:200px; height:200px;">
+                <div class="profile-text">
+                <p>Lucas Larsson</p>
+                <a href="tel:123-456-7890">0701234567</a>
+                <a href="mailto:webmaster@example.com">Mail</a>
+                </div>
+        </div>
+    </section>
+    <!-- 
+    Team picture.
+    -->
+    <section class="team">
+    <div class="team-image">
+       <img class="team-picture" src="images/unsplash.png" alt="picture from unsplash, Javier Allegue Barros">
+    </div>
+    </section>
+    <!-- 
+    Contact form.
+    -->
+    <section class="contact">
+        <div class="form form">
+            <div class="form-alert">
+                <p>Ditt meddelande har skickats (Not really).</p>
+            </div>
+            <div class="form-input">
+                <form action="#">
+                    <div class="form-row">
+                        <div class="form-labels">
+                            <label for="Name">Namn: </label> 
+                        </div>
+                        <div class="form-75">
+                            <input type="text" id="fname" name="firstname" placeholder="John Doe">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-labels">
+                            <label for="email">Mail: </label> 
+                        </div>
+                        <div class="form-75">
+                            <input type="email" id="email" name="email" placeholder="yourname@example.com">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-labels">
+                          <label for="subject">Meddelande: </label>
+                        </div>
+                        <div class="form-75">
+                          <textarea id="subject" name="subject" placeholder="Type something.." style="height:200px"></textarea>
+                        </div>
+                      </div>
+                    </form>
+                    <div class="form-row">
+                        <button class="form-btn" type="submit" value="Send">Skicka</button>
+                    </div>
+               </div>
+        </div>
+    </section>
+    <footer>
+        <p class="footer-content">Lucas Larsson - 2022</p>
+    </footer>
+</main>
+<script>
+// Show when button is clicked by user.
+$(document).ready(function () {
+    $(".form-alert").hide();
+    $(".form-btn").click(function(){
+    $(".form-alert").toggle();
+});
+});
+</script>
+</body>
+</html>
