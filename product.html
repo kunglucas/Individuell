@@ -15,8 +15,8 @@
 <body>
     <header>
         <div class="sidenav">
-            <a class="sidenav-active" href="index.html">Hem</a>
-            <a href="product.html">Alla produkter</a>
+            <a href="index.html">Hem</a>
+            <a class="sidenav-active" href="product.html">Alla produkter</a>
             <a href="addproduct.html">Lägg till produkt</a>
             <a href="contact.html">Om oss</a>
           </div>
@@ -25,14 +25,14 @@
     <h1 class="title">SkoPunktSe</h1>
     <section class="jumbotron">
         <article class="panel panel-featured">
-            <h2 class="panel-title">Skynda Fynda!</h2>
-            <p class="panel-text">Black Friday är runt hörnet och här visar vi stolt upp våra bästsäljare. Tipsa familjen, vänner och grannen om oss! Vi garanterar kundnöjdhet till samtliga som köper våra produkter!</p>
+            <h2 class="panel-title">Alla våra produkter!</h2>
+            <p class="panel-text">Vi laddar upp inför black friday! Handla hos oss nu och du kommer inte att ångra dig!</p>
         </article>
     </section>
     <section class="products">
         <div class="card card">
             <div class="card-image">
-                <a href="viewproduct.html?product=sko1"><img src="images/toffla.png" alt="Adidas Toffla för stranden"></a>
+                <a href="viewproduct.html?product=sko1"><img src="images/toffla.png" alt="Toffla för stranden"></a>
             </div>
             <h2 class="card-title">Tofflan</h2>
             <small class="card-model">Årsmodell 2000</small>
@@ -109,6 +109,56 @@
         </div>
     </section>
 </main>
-<script type="text/javascript" src="js/products.js"></script>
+<script>
+    // Jquery to hover the jumbotron and display Motod.
+$(".panel").hover(function () {
+    $(this).append($("<span class='hid'> Just Buy It! </span>"));
+},function () {
+    $(this).find('span').slideUp('fast');
+});
+
+// Show when button is clicked by user.
+$(document).ready(function () {
+
+$("#p5").hide();
+$("#p4").hide();
+$("#p3").hide();
+$("#p2").hide();
+$("#p1").hide();
+$("#showNumbFive").show();
+$("#showNumbFour").show();
+$("showNumbThree").show();
+$("showNumbTwo").show();
+$("showNumbOne").show();
+
+$("#showNumbFive").click(function(){
+     $("#p5").toggle();
+     $("#showNumbFive").html() === 'Visa mer' ? $("#showNumbFive").html('Visa mindre') : $("#showNumbFive").html('Visa mer');
+});
+
+$("#showNumbFour").click(function(){
+     $("#p4").toggle();
+     $("#showNumbFour").html() === 'Visa mer' ? $("#showNumbFour").html('Visa mindre') : $("#showNumbFour").html('Visa mer');
+});
+
+$("#showNumbThree").click(function(){
+     $("#p3").toggle();
+    //  $("#showNumbFive").html("Visa mindre").toggle();
+     $("#showNumbThree").html() === 'Visa mer' ? $("#showNumbThree").html('Visa mindre') : $("#showNumbThree").html('Visa mer');
+});
+
+$("#showNumbTwo").click(function(){
+     $("#p2").toggle();
+    //  $("#showNumbFive").html("Visa mindre").toggle();
+     $("#showNumbTwo").html() === 'Visa mer' ? $("#showNumbTwo").html('Visa mindre') : $("#showNumbTwo").html('Visa mer');
+});
+
+$("#showNumbOne").click(function(){
+     $("#p1").toggle();
+    //  $("#showNumbFive").html("Visa mindre").toggle();
+     $("#showNumbOne").html() === 'Visa mer' ? $("#showNumbOne").html('Visa mindre') : $("#showNumbOne").html('Visa mer');
+});
+});
+</script>
 </body>
 </html>

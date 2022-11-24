@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,55 +16,93 @@
     <header>
         <div class="sidenav">
             <a href="index.html">Hem</a>
-            <a href="viewproduct.html">Alla produkter</a>
-            <a href="addproduct.html">Lägg till produkt</a>
+            <a href="product.html">Alla produkter</a>
+            <a class="sidenav-active" href="addproduct.html">Lägg till produkt</a>
             <a href="contact.html">Om oss</a>
           </div>
     </header>
 <main>
-  <h1 class="heading-title">SkoPunktSe</h1>
+  <h1 class="title">SkoPunktSe - Admin interface.</h1>
     <section class="admin">
-      <p class="admin admin-submitted" id="p1">Produkten är tillagd!</p>
-      <form id="form1">
-            <label for="pname">Namn</label>
-            <input type="text" id="fname" name="firstname" placeholder="Produktens namn..">
-        
-            <label for="price">Pris</label>
-            <input type="text" id="lname" name="lastname" placeholder="Sätt ett pris i siffror..">
-            
-            <label for="lname">Kort beskrivning</label>
-            <textarea placeholder="Beskriv produkten.."></textarea>
-            <label for="media">Bilder</label>
-            <div class="media">
-              <input type="file" id="myfile" name="myfile" multiple>
-              <input type="file" id="myfile" name="myfile" multiple>
-              <input type="file" id="myfile" name="myfile" multiple>
+      <div class="form form">
+        <div class="form-alert">
+          <p>Produkten är skapad! (Not really).</p>
+        </div>
+        <div class="form-input">
+          <form id="form1">
+            <div class="form-row">
+              <div class="form-labels">
+                <label for="Name">Namn: </label> 
+              </div>
+              <div class="form-75">
+                <input type="text" id="fname" name="firstname" placeholder="E.g Nike..">
+              </div>
             </div>
-            <label for="category">Kategori</label>
-            <select id="category" name="category">
-              <option value="sport">Sport</option>
-              <option value="outdoors">Outdoors</option>
-              <option value="running">Running</option>
-              <option value="skav">Skavsår</option>
-            </select>
+            <div class="form-row">
+              <div class="form-labels">
+                <label for="Name">Pris: </label> 
+              </div>
+              <div class="form-75">
+                <input type="number" id="fname" name="firstname" placeholder="Product price range..">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-labels">
+                <label for="Name">Beskrivning: </label> 
+              </div>
+              <div class="form-75">
+                <textarea placeholder="Describe this product.."></textarea>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-labels">
+                <label for="media">Bilder:</label>
+              </div>
+              <div class="form-75">
+                <label class="form-file">
+                  <p class="form-btn-file">Välj fil</p>
+                  <input type="file" id="myfile" name="myfile" multiple>
+                </label>
+                <label class="form-file">
+                  <p class="form-btn-file">Välj fil</p>
+                  <input type="file" id="myfile" name="myfile" multiple>
+                </label>
+                <label class="form-file">
+                  <p class="form-btn-file">Välj fil</p>
+                  <input type="file" id="myfile" name="myfile" multiple>
+                </label>
+                <label class="form-file">
+                  <p class="form-btn-file">Välj fil</p>
+                  <input type="file" id="myfile" name="myfile" multiple>
+                </label>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-labels">
+                <label for="Name">Kategori: </label> 
+              </div>
+              <div class="form-75">
+                <select id="category" name="category">
+                  <option value="sport">Sport</option>
+                  <option value="outdoors">Outdoors</option>
+                  <option value="running">Running</option>
+                  <option value="skav">Skavsår</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-labels">
+  
+              </div>
+              <div class="form-75">
+                <button class="form-btn-create" type="button" value="Send">Skapa</button>
+              </div>
+            </div>
           </form>
-          <input type="submit" id="show-text-btn" value="Skapa produkt">
-        </section>
-        <section class="footer">
-            <p class="footer-content">&copy; SkoPunktSe - 2022</p>
+        </div>
+      </div>
         </section>
 </main>
-<script>
-    // Show when button is clicked by user.
-    $(document).ready(function () {
-
-$("#p1").hide();
-
-$("#show-text-btn").click(function(){
-     $("#p1").toggle();
-     $("#form1").toggle();
-});
-});
-</script>
+<script type="text/javascript" src="js/forms.js"></script>
 </body>
 </html>

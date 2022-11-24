@@ -1,12 +1,14 @@
 $body-background: #d3d3d3;
-$nav-background: #c3c1c1;
+$nav-background: #e5dfdf;
 $primary-color: rgb(20, 115, 198);
 $primary-color-hover: rgb(2, 79, 147);
 $success-color:#28a745;
+$success-color-hover:#28a746dd;
 $hover-text-color:rgb(255, 136, 0);
 $danger-color: #d9534f;
 $default-color: #6c757d;
-$card-bg-color: #c8cfd5;
+$card-bg-color: #c9d8e5;
+$admin-color:rgba(128, 0, 128, 0.91);
   
 @media screen and (max-height: 750px) {
     .sidenav {padding-top: 15px;}
@@ -29,21 +31,38 @@ $card-bg-color: #c8cfd5;
     width:fit-content;
 
    &:hover {
-    background-color:$card-bg-color;
-    border:2px solid black;
-    transition: 600ms;
+    background-color:white;
+    transition: 400ms;
+    transform: scale(1.1);
+    margin-bottom:30px;
+
+    & .card-table {
+        height:200px !important;
+    }
+
+    & .card-price {
+        text-decoration:underline;
+    }
+
+    & .card-retired {
+        text-decoration:underline;
+    }
     
     & .card-title {
         color:$primary-color-hover;
-        transition: 800ms;
+        transition: 400ms;
         border-color: $primary-color-hover;
         display: inline-block;
         text-transform: uppercase;
     }
 
+    & .card-table {
+        transform:none !important;
+    }
+
     & .card-model {
         color:$primary-color-hover;
-        transition: 800ms;
+        transition: 400ms;
         border-color: $primary-color-hover;
         display: inline-block;
     }
@@ -69,16 +88,16 @@ $card-bg-color: #c8cfd5;
     flex-direction: column;
     width:fit-content;
     padding:24px;
+    color:white;
 
    &:hover {
     background-color:rgb(9, 9, 10);
-    color:white;
 }
 }
 
 @mixin form {
     margin:2rem;
-    width:fit-content;
+    width:90%;
     padding:24px;
     height:auto;
 }
@@ -97,8 +116,10 @@ $card-bg-color: #c8cfd5;
 body {
     height:100%;
     width:100vw;
-    background-color:$body-background;
+    background-color:$card-bg-color;
     font-family:sans-serif;
+    padding:20px;
+    overflow-x: hidden;
 }
 
 main {
@@ -122,14 +143,28 @@ main {
         text-decoration: none;
         font-size: 25px;
         display: block;
+        font-weight:bolder;
     }
 
     & a:visited {
         color:black;
     }
 
+    &-active {
+        color: $success-color;
+    }
+
+    &-active:visited {
+        color: $success-color !important;
+    }
+
+    &-active:hover {
+        color:$success-color-hover;
+    }
+
     & a:hover {
         color:$primary-color;
+        border-bottom:1px solid;
     }
 
   }
@@ -153,6 +188,50 @@ main {
     gap:10px;
     flex-direction:row;
 }
+//View product description.
+
+.table {
+    display: flex;
+    margin: 1rem;
+    flex-direction: column;
+    width:fit-content;
+    width: 600px;
+    border-radius: 8px;
+    background-color:white;
+    height:200px;
+
+    &-title {
+        color:rgb(255, 136, 0);
+        text-align:center;
+        font-weight:bold;
+        text-decoration: underline;
+        padding:2px;
+    }
+
+    &-desc {
+        color:slategrey;
+        margin-left:4px;
+        margin-right:4px;
+        margin-top:2rem;
+        
+        & li {
+            list-style:none;
+        }
+    }
+
+    &-footer {
+        height: 70px;
+        background-color: $default-color;
+        border-top:1px solid black;
+        
+        & img {
+            max-height:70px;
+            opacity: 0.6;
+            float:right;
+        }
+    }
+}
+
 //Team image.
 .team {
     margin-top:20px;
@@ -174,28 +253,76 @@ main {
     @include form();
     margin-top:20px;
     height:auto;
-    width:100%;
     
     
     &-input {
         border-radius: 5px;
         background-color: #f2f2f2;
         padding: 20px;
+
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+    
+        textarea {
+            height:200px;
+        }
+
+        input[type=file] {
+            display: none;
+        }
+
+        select {
+            font-weight:bold;
+            width:94% !important;
+        }
+        
+        input[type=text], input[type=email], input[type=number], textarea, select {
+            width: 90%;
+            color:$admin-color;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+          }
     }
 
-    label {
-        padding: 12px 12px 12px 0;
-        display: inline-block;
+    &-file {
+        cursor:pointer;
+        background-color:$primary-color;
+        height:30px;
+        width:90px;
+        text-align:center !important;
     }
-    
-    input[type=text], input[type=email], textarea {
-        width: 90%;
-        color:purple;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        resize: vertical;
-      }
+
+    &-file:hover {
+        background-color:rgb(2, 79, 147);
+    }
+
+    &-btn-file {
+        margin-top:4px;
+        color:white;
+        font-weight:bolder;
+    }
+
+    &-btn-create {
+        width:94%;
+        height:40px;
+        background-color:$success-color;
+        color:white;
+        float:left;
+        font-weight:bolder;
+        cursor: pointer;
+    }
+
+    &-btn-create:hover {
+        background-color:$success-color-hover;
+    }
+
+    &-row {
+        margin-top:5px;
+    }
 
     &-row:after {
     content: "";
@@ -222,18 +349,19 @@ main {
       }
 
     &-btn {
+        width: 94%;
+        color: white;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-weight:bolder;
+        resize: vertical;
         background-color:black;
-        float: right;
-        height:40px;
-        width: 75%;
-        border-radius: 8px;
-        color:white;
-        margin-top:40px;
         cursor: pointer;
     }
 
     &-alert {
-        background-color:purple;
+        background-color:$admin-color;
         width:100%;
         color:white;
         font-weight: bold;
@@ -265,63 +393,6 @@ main {
     flex-direction:row;
     margin-left:10px;
 }
-// Add product.
-.admin {
-border-radius: 5px;
-background-color: #f2f2f2;
-padding: 20px;
-width:70%;
-
-&-submitted {
-    color:white;
-    background-color:$success-color;
-}
-
-& input[type=text], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-
-  & input[type=file], select {
-    width: 200px;
-    padding: 12px 20px;
-    margin: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    display: inline-block;
-    flex-flow: row wrap;
-    align-items: center;
-  }
-  
-  & input[type=submit] {
-    width: 100%;
-    background-color: $primary-color;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  & textarea {
-    width: 100%;
-    height: 150px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-  }
-  
-  & input[type=submit]:hover {
-    background-color: $primary-color-hover;
-  }
-
-}
 // Card elements.
 .card {
     @include card();
@@ -329,12 +400,45 @@ width:70%;
     max-width:310px;
     border-radius:6px;
 
+    & .img-sm {
+       width:200px;
+       height:200px;
+       max-height:200px !important;
+       align-items: center;
+
+       & img {
+        width:200px;
+        height:200px;
+       }
+    }
+
+&-table {
+    background-color:white;
+    height:200px;
+    width:500px !important;
+}
+
 &-title {
     font-size:1.2rem;
     margin-left:4px;
     text-align:center;
     color:$primary-color;
     font-weight:bold;
+}
+
+&-price {
+    margin-left:4px;
+    color:$success-color;
+    text-align:center;
+    margin-top:0px;
+}
+
+&-retired {
+    color:$danger-color;
+    margin-left:4px;
+    margin-top:0px;
+    text-decoration:line-through;
+    text-align:center;
 }
 
 &-model {
@@ -354,11 +458,13 @@ width:70%;
         width:300px;
         opacity: 0.6;
     }
+
 }
 
 &-text {
     margin-left:4px;
     margin-right:4px;
+    margin-top:0;
 }
 
 &-button {
@@ -421,7 +527,7 @@ width:70%;
 
 }
 
-// Panel elements.
+// Panel/jumbotron element.
 .panel {
     @include panel();
     width: fit-content;
@@ -443,7 +549,7 @@ width:70%;
 
 }
 
-// Panel elements.
+// CEO profile element.
 .profile {
     @include profile();
     width: fit-content;
@@ -473,36 +579,4 @@ width:70%;
         color:white;
     }
 }
-
-}
-
-.social {
-    width: fit-content;
-    display: flex;
-    flex-wrap: wrap;
-    gap:16px;
-    flex-direction:row;
-}
-
-.credit-title {
-    color:$primary-color; 
-    border-top:1px dashed rgb(49, 50, 52);
-    width:100%;
-    gap:1.2em;
-    text-align:center;
-}
-
-.credit-card {
-    @include card();
-    @include hovereffect();
-    border-radius:4px;
-    width:210px;
-    background-image: url("https://ll-wd.com/images/logo.png");
-    background-size: cover;
-    color:white;
-    & p {
-        margin-bottom:4px;
-        margin-top:0px;
-        filter:brightness(95%);
-    }
 }
