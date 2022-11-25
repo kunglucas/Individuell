@@ -337,7 +337,6 @@ main {
         background-color:$primary-color;
         height:30px;
         width:90px;
-        text-align:center !important;
     }
 
     &-file:hover {
@@ -348,6 +347,8 @@ main {
         margin-top:4px;
         color:white;
         font-weight:bolder;
+        display:grid;
+        justify-content:center;
     }
 
     &-btn-create {
@@ -558,7 +559,7 @@ main {
 
 }
 
-// Panel/jumbotron element.
+// Panel element.
 .panel {
     @include panel();
     width: fit-content;
