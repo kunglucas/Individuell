@@ -10,6 +10,7 @@ $default-color: #6c757d;
 $card-bg-color: #c8d8e4;
 $admin-color:rgba(128, 0, 128, 0.91);
 $nav-color-active: #52ab98;
+$dark-color:black;
   
 @media screen and (max-height: 750px) {
     .sidenav {padding-top: 15px;}
@@ -31,6 +32,26 @@ $nav-color-active: #52ab98;
     flex-direction: column;
     width:fit-content;
     background-color:white;
+
+    & .bg-primary {
+        background-color:$primary-color;
+    }
+
+    & .bg-danger {
+        background-color:$danger-color;
+    }
+
+    & .bg-dark {
+        background-color:$dark-color;
+    }
+
+    & .bg-success {
+        background-color:$success-color;
+    }
+
+    & .bg-default {
+        background-color:$default-color;
+    }
 
    &:hover {
     background-color:white;
@@ -182,6 +203,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap:10px;
+    margin-right:4px;
     flex-direction:row;
 }
 
@@ -202,6 +224,26 @@ main {
     border-radius: 8px;
     background-color:white;
     height:200px;
+
+    & .bg-primary {
+        background-color:$primary-color;
+    }
+
+    & .bg-danger {
+        background-color:$danger-color;
+    }
+
+    & .bg-dark {
+        background-color:$dark-color;
+    }
+
+    & .bg-success {
+        background-color:$success-color;
+    }
+
+    & .bg-default {
+        background-color:$default-color;
+    }
 
     &-title {
         color:rgb(255, 136, 0);
@@ -224,9 +266,9 @@ main {
 
     &-footer {
         height: 70px;
-        background-color: black;
         border-top:1px solid black;
         display:grid;
+        background-color:black;
         justify-content:center;
         font-weight:bold;
         cursor:pointer;
@@ -488,22 +530,6 @@ main {
     height:20px;
     display: flex;
     align-items: center;
-
-    & .bg-primary {
-        background-color:$primary-color;
-    }
-
-    & .bg-danger {
-        background-color:$danger-color;
-    }
-
-    & .bg-success {
-        background-color:$success-color;
-    }
-
-    & .bg-default {
-        background-color:$default-color;
-    }
 }
 
 &-tag-text {
@@ -542,6 +568,14 @@ main {
 
 &-title {
     font-size:1.5rem;
+}
+
+&-about {
+    margin-top:0px;
+}
+
+&-h {
+    margin-bottom:0px;
 }
 
 &-featured {

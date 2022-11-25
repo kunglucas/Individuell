@@ -70,6 +70,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  margin-right: 4px;
   flex-direction: row;
 }
 
@@ -90,6 +91,21 @@ main {
   background-color: white;
   height: 200px;
 }
+.table .bg-primary {
+  background-color: rgb(20, 115, 198);
+}
+.table .bg-danger {
+  background-color: #d9534f;
+}
+.table .bg-dark {
+  background-color: black;
+}
+.table .bg-success {
+  background-color: #28a745;
+}
+.table .bg-default {
+  background-color: #6c757d;
+}
 .table-title {
   color: rgb(255, 136, 0);
   text-align: center;
@@ -108,9 +124,9 @@ main {
 }
 .table-footer {
   height: 70px;
-  background-color: black;
   border-top: 1px solid black;
   display: grid;
+  background-color: black;
   justify-content: center;
   font-weight: bold;
   cursor: pointer;
@@ -269,6 +285,21 @@ main {
   max-width: 310px;
   border-radius: 6px;
 }
+.card .bg-primary {
+  background-color: rgb(20, 115, 198);
+}
+.card .bg-danger {
+  background-color: #d9534f;
+}
+.card .bg-dark {
+  background-color: black;
+}
+.card .bg-success {
+  background-color: #28a745;
+}
+.card .bg-default {
+  background-color: #6c757d;
+}
 .card:hover {
   background-color: white;
   transition: 400ms;
@@ -377,18 +408,6 @@ main {
   display: flex;
   align-items: center;
 }
-.card-tag .bg-primary {
-  background-color: rgb(20, 115, 198);
-}
-.card-tag .bg-danger {
-  background-color: #d9534f;
-}
-.card-tag .bg-success {
-  background-color: #28a745;
-}
-.card-tag .bg-default {
-  background-color: #6c757d;
-}
 .card-tag-text {
   border-radius: 5px;
   padding: 4px;
@@ -425,6 +444,12 @@ main {
 }
 .panel-title {
   font-size: 1.5rem;
+}
+.panel-about {
+  margin-top: 0px;
+}
+.panel-h {
+  margin-bottom: 0px;
 }
 .panel-featured {
   max-width: 1000px;
