@@ -32,9 +32,9 @@
                 <h3 class="card-price" id="product-price"></h3>
                 <h3 class="card-retired">400 SEK</h3>
                 <p class="card-text" id="product-text"></p>
-                <p class="card-text">Toffla tillverkad av hårdplast. Finns endast ett fåtal storlekar kvar från fjolårets bästsäljare!...</p>
+                <p class="card-text">Toffla tillverkad av hårdplast. Finns endast ett fåtal storlekar kvar från fjolårets bästsäljare!</p>
                 <p class="card-text" id="p1">
-                    Varning tofflan kan komma att smälta i solen..
+                    Varning tofflan kan komma att smälta i solen.
                 </p>
                 <button class="card-button" id="showNumbOne">Visa mer</button>
                 <span class="card-tag">
@@ -57,7 +57,7 @@
                     </ul>
                 </div>
                 <div class="table-footer">
-                    <img src="images/toffla.png" alt="Adidas Toffla för stranden">
+                    <h4>Lägg till i varukorg</h4>
                 </div>
             </div>
             </section>
@@ -84,12 +84,12 @@
                 const queryString = window.location.search;
                 const urlParams = new URLSearchParams(queryString);
                 const product = urlParams.get("product");
-                const product1 = ["Toffla", "Black & White", "350kr", "toffla.png"];
-                const product2 = ["Adidas", "Black & White", "508kr", "adidas.png"];
-                const product3 = ["Vans", "Black & White", "510kr", "vans.png"];
-                const product4 = ["Adidas", "Brown", "520kr", "adidas.png"];
-                const product5 = ["Timberland", "Blue", "550kr", "snow.png"];
-                const product6 = ["Nike", "White", "100kr", "nike.png"];
+                const product1 = ["Toffla", "Black & White", "350 SEK", "toffla.png"];
+                const product2 = ["Adidas", "Black & White", "508 SEK", "adidas.png"];
+                const product3 = ["Vans", "Black & White", "510 SEK", "vans.png"];
+                const product4 = ["Adidas", "Brown", "520 SEK", "adidas.png"];
+                const product5 = ["Timberland", "Blue", "550 SEK", "snow.png"];
+                const product6 = ["Nike", "White", "100 SEK", "nike.png"];
                 const noItem = "Product not found..";
         
                 switch (product) {

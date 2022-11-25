@@ -17,7 +17,7 @@
 body {
   height: 100%;
   width: 100vw;
-  background-color: #c9d8e5;
+  background-color: #c8d8e4;
   font-family: sans-serif;
   padding: 20px;
   overflow-x: hidden;
@@ -34,7 +34,7 @@ main {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #e5dfdf;
+  background-color: #2b6777;
   overflow-x: hidden;
   padding-top: 20px;
 }
@@ -46,19 +46,19 @@ main {
   font-weight: bolder;
 }
 .sidenav a:visited {
-  color: black;
+  color: white;
 }
 .sidenav-active {
-  color: #28a745;
+  color: #52ab98;
 }
 .sidenav-active:visited {
-  color: #28a745 !important;
+  color: #52ab98 !important;
 }
 .sidenav-active:hover {
-  color: rgba(40, 167, 70, 0.8666666667);
+  color: #52ab98;
 }
 .sidenav a:hover {
-  color: rgb(20, 115, 198);
+  color: #52ab98;
   border-bottom: 1px solid;
 }
 
@@ -108,13 +108,13 @@ main {
 }
 .table-footer {
   height: 70px;
-  background-color: #6c757d;
+  background-color: black;
   border-top: 1px solid black;
-}
-.table-footer img {
-  max-height: 70px;
-  opacity: 0.6;
-  float: right;
+  display: grid;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
 }
 
 .team {
@@ -264,6 +264,7 @@ main {
   margin: 1rem;
   flex-direction: column;
   width: fit-content;
+  background-color: white;
   width: fit-content;
   max-width: 310px;
   border-radius: 6px;
@@ -281,7 +282,7 @@ main {
   text-decoration: underline;
 }
 .card:hover .card-retired {
-  text-decoration: underline;
+  text-decoration: line-through;
 }
 .card:hover .card-title {
   color: rgb(2, 79, 147);
@@ -351,17 +352,19 @@ main {
 }
 .card-image img {
   width: 300px;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 .card-text {
   margin-left: 4px;
   margin-right: 4px;
   margin-top: 0;
+  margin-bottom: 0px;
 }
 .card-button {
   background-color: #d9534f;
   color: white;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 25px;
   margin-left: 4px;
   width: 40%;
   border-radius: 6px;
@@ -412,21 +415,19 @@ main {
   padding: 24px;
   color: white;
   width: fit-content;
-  background-color: rgb(20, 115, 198);
+  background-color: white;
   border-radius: 6px;
+  color: black;
 }
 .panel:hover {
   background-color: rgb(9, 9, 10);
+  color: white;
 }
 .panel-title {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 .panel-featured {
-  max-width: 1200px;
-}
-.panel-featured .panel-title {
-  font-size: 1.5rem;
-  color: white;
+  max-width: 1000px;
 }
 
 .profile {

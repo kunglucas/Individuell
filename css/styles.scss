@@ -1,5 +1,5 @@
 $body-background: #d3d3d3;
-$nav-background: #e5dfdf;
+$nav-background:#2b6777;
 $primary-color: rgb(20, 115, 198);
 $primary-color-hover: rgb(2, 79, 147);
 $success-color:#28a745;
@@ -7,8 +7,9 @@ $success-color-hover:#28a746dd;
 $hover-text-color:rgb(255, 136, 0);
 $danger-color: #d9534f;
 $default-color: #6c757d;
-$card-bg-color: #c9d8e5;
+$card-bg-color: #c8d8e4;
 $admin-color:rgba(128, 0, 128, 0.91);
+$nav-color-active: #52ab98;
   
 @media screen and (max-height: 750px) {
     .sidenav {padding-top: 15px;}
@@ -29,6 +30,7 @@ $admin-color:rgba(128, 0, 128, 0.91);
     margin:1rem;
     flex-direction: column;
     width:fit-content;
+    background-color:white;
 
    &:hover {
     background-color:white;
@@ -45,7 +47,7 @@ $admin-color:rgba(128, 0, 128, 0.91);
     }
 
     & .card-retired {
-        text-decoration:underline;
+        text-decoration:line-through;
     }
     
     & .card-title {
@@ -92,6 +94,7 @@ $admin-color:rgba(128, 0, 128, 0.91);
 
    &:hover {
     background-color:rgb(9, 9, 10);
+    color:white;
 }
 }
 
@@ -147,23 +150,23 @@ main {
     }
 
     & a:visited {
-        color:black;
+        color:white;
     }
 
     &-active {
-        color: $success-color;
+        color: $nav-color-active;
     }
 
     &-active:visited {
-        color: $success-color !important;
+        color: $nav-color-active !important;
     }
 
     &-active:hover {
-        color:$success-color-hover;
+        color:$nav-color-active;
     }
 
     & a:hover {
-        color:$primary-color;
+        color:$nav-color-active;
         border-bottom:1px solid;
     }
 
@@ -221,14 +224,13 @@ main {
 
     &-footer {
         height: 70px;
-        background-color: $default-color;
+        background-color: black;
         border-top:1px solid black;
-        
-        & img {
-            max-height:70px;
-            opacity: 0.6;
-            float:right;
-        }
+        display:grid;
+        justify-content:center;
+        font-weight:bold;
+        cursor:pointer;
+        color:white;
     }
 }
 
@@ -456,7 +458,7 @@ main {
 
     & img {
         width:300px;
-        opacity: 0.6;
+        opacity: 0.8;
     }
 
 }
@@ -465,16 +467,19 @@ main {
     margin-left:4px;
     margin-right:4px;
     margin-top:0;
+    margin-bottom:0px;
 }
 
 &-button {
     background-color:$danger-color;
     color:white;
-    margin-bottom:20px;
+    margin-top:20px;
+    margin-bottom:25px;
     margin-left:4px;
     width:40%;
     border-radius:6px;
     padding:4px;
+
 }
 
 &-tag {
@@ -531,20 +536,16 @@ main {
 .panel {
     @include panel();
     width: fit-content;
-    background-color:$primary-color;
+    background-color:white;
     border-radius:6px;
+    color:black;
 
 &-title {
-    font-size:1.2rem;
+    font-size:1.5rem;
 }
 
 &-featured {
-    max-width:1200px;
-    
-    & .panel-title {
-        font-size:1.5rem;
-        color:white;
-    }
+    max-width:1000px;
 }
 
 }
